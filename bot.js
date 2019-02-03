@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const prefix = '^^'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -271,6 +272,11 @@ client.on("message", message => {
 👑^^delet  『كـود يحذف الـروم سواء صوتي او كتابي』
 
 👑^^stats  『لعرض حالة السيرفر』
+
+👑^^mute  『لكتم كتابة شخص للرومات الكتابية』
+
+👑^^unmute  『لفك كتم كتابة شخص للرومات الكتابية』
+
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
 
 🎲『القرعة』🎲
@@ -1398,5 +1404,21 @@ m.sendMessage(args)
 })
 }
 });
+
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "mute")) {
+    if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
+  { message.member.setMute(true);
+    }
+  }
+    });
+
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "unmute")) {
+    if (!message.member.hasPermission('MUTE_MEMBERS')) return;
+  { message.member.setMute(false);
+    }
+  }
+    });
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
