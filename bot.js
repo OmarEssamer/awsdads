@@ -27,7 +27,7 @@ client.on("message", message => {
    message.react("😜")
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .addField("『ESK『اسم البوت』", true)
+      .addField("『Frazza『اسم البوت』", true)
       
       .addField("『FZ | Amory | MA#5792』『مصمم البوت』", true)
       
@@ -870,7 +870,7 @@ client.on("message", message => {
 client.on('message', message => {
   if (true) {
 if (message.content === '^^support') {
-      message.author.send(' |https://discord.gg/yaQZEeZ لـ أي استفسار').catch(e => console.log(e.stack));
+      message.author.send(' |https://discord.gg/Fewz4j6 لـ أي استفسار').catch(e => console.log(e.stack));
 
     }
    } 
@@ -895,7 +895,7 @@ client.on('message', message => {
 client.on('message', message => {
   if (true) {
 if (message.content === '^^invite') {
-      message.author.send(' رابط البوت |  https://goo.gl/q9pXny ').catch(e => console.log(e.stack));
+      message.author.send(' رابط البوت |  https://goo.gl/yUV3Ty ').catch(e => console.log(e.stack));
 
     }
    } 
@@ -920,7 +920,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('^^bc-users')){
- if(!message.author.id === 'اي دي صاحب البوت') return;
+ if(!message.author.id === '491668935947714568') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
