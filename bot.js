@@ -1395,7 +1395,7 @@ let devs = ["434282754016935937","491668935947714568"]; // تقدر تضيف ا�
 client.on("message", msg =>{
   let args = msg.content.split(" ").slice(1)[0];
   let cmd = msg.content.split(' ')[0]
-  if(cmd === `${prefix}^^giftR`){
+  if(cmd === `${prefix}$giftR`){
   let roleW = msg.mentions.roles.first();
   if(!devs.includes(msg.author.id)){
     let embed = new Discord.RichEmbed()
@@ -1407,7 +1407,7 @@ client.on("message", msg =>{
   if(!roleW) {
     let embed = new Discord.RichEmbed()
     .setColor("#42f4f4")
-    .setTitle(`:x: - منشن الرتبة \`${prefix}^^giftR <@admin-role>\``);
+    .setTitle(`:x: - منشن الرتبة \`${prefix}$giftR <@admin-role>\``);
     msg.reply(embed).then( z => z.delete(3000)); return
   };
   let role = msg.guild.roles.find(`name`, roleW.name);
@@ -1439,7 +1439,7 @@ client.on("message", msg =>{
   .setFooter(client.user.username,client.user.displayAvatarURL)
   msg.author.send(embed2);
 };
-if( cmd === `${prefix}^^used`){
+if( cmd === `${prefix}$used`){
  
   if(!args) {
     let embed = new Discord.RichEmbed()
