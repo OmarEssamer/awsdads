@@ -520,7 +520,7 @@ if (message.content.startsWith("^^cv")) {
 
 
 
-var prefix = "^^";
+const prefix= "^^";
 
 client.on('message', message => {
   if (message.author.bot) return;
