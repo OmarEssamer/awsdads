@@ -1439,7 +1439,7 @@ client.on("message", msg =>{
   .setFooter(client.user.username,client.user.displayAvatarURL)
   msg.author.send(embed2);
 };
-if( cmd === `${prefix}$used`){
+if( cmd === `${prefix}used`){
  
   if(!args) {
     let embed = new Discord.RichEmbed()
