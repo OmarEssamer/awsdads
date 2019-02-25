@@ -1532,33 +1532,6 @@ client.on("message", (message) => {
  
 });
 
-client.on('message', message => {
- 
- 
-if (message.content === prefix + "lock") {
-if(!message.channel.guild) return message.reply('⛔ | This Command For Servers Only!');
-        if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | You dont have **MANAGE_MESSAGES** Permission!');
-        if(!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
-           message.channel.overwritePermissions(message.guild.id, {
-         READ_MESSAGES: false
- 
-           }).then(() => {
-               message.reply("Channel Locked ✅ ")
-           });
-}
-  if (message.content === prefix + "unlock") {
-if(!message.channel.guild) return message.reply('⛔ | This Command For Servers Only!');
-        if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | You dont have **MANAGE_MESSAGES** Permission!');
-        if(!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
-           message.channel.overwritePermissions(message.guild.id, {
-         READ_MESSAGES: true
- 
-           }).then(() => {
-               message.reply("Channel UnLocked ✅ ")
-           });
-}
- 
- 
-});
+
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
